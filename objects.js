@@ -1,16 +1,18 @@
+currentnumber=-1;
 var id = 0;
 
-function student(firstName, lastName, grade) {
+function Student(firstName, lastName, grade) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.grade = grade;
     this.id = id++;
 }
 
-function teacher(firstName,lastName,subject) {
+function Teacher(firstName, lastName, subject) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.subject = subject;
+    this.id = id++;
 }
 
 function Section(name, count) {
@@ -32,5 +34,4 @@ function Section(name, count) {
             }
         }
     };
-
 }
