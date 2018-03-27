@@ -81,8 +81,8 @@ function addToLists() {
     for(var i = 0; i < allSections.length; i++) {
         subjects += "<option value='" + allSections[i].id + "'>" + allSections[i].name +  "</option>";
     }
-    document.getElementById("sections").innerHTML += subjects;
-    document.getElementById("sections2").innerHTML += subjects;
+    document.getElementById("sections").innerHTML = subjects;
+    document.getElementById("sections2").innerHTML = subjects;
 }
 
 function clearPage() {
@@ -150,10 +150,10 @@ function displayStudentsInSection() {
 function displayTeacherInSection() {
     var adult = "<table id='teacherInSection' border='1'>";
     var section = getSectionById(parseInt(document.getElementById("sections2").value));
-    console.log(section);
-    for(var i = 0; i < section.studentsInSection.length; i++) {
-        kids += "<tr><td>" + section.studentsInSection[i].firstName + " </td> <td> " + section.studentsInSection[i].lastName + "</td>";
-        kids += "<td> <button value='" +section.studentsInSection[i].id + "'id='" +section.studentsInSection[i].id +
+    console.log(section.teacher);
+    for(var i = 0; i < section.teacherInSection.length; i++) {
+        adult += "<tr><td>" + section.studentsInSection[i].firstName + " </td> <td> " + section.studentsInSection[i].lastName + "</td>";
+        adult += "<td> <button value='" +section.studentsInSection[i].id + "'id='" +section.studentsInSection[i].id +
             "' onclick=removeStudentFromSection(this.value," + section.id + ")>Remove Student</button></td></tr>";
 
     }
