@@ -1,12 +1,16 @@
-table1 {
-    border: 2px solid black;
-
+#table1 {
+    margin-top: 50px;
+    margin-left: 20%;
+}
+#selectSection {
+    margin-top: 50px;
+    margin-left: 40%;
 }
 #title {
-    font-size: 40px;
+    font-size: 60px;
     font-family: "Bookman Old Style";
     width: auto;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 30px;
 }
 #items {
@@ -21,8 +25,12 @@ table1 {
 }
 
 #listed {
-    margin-left: 42%;
+    margin-left: 40%;
     padding:10px;
     border-radius: 25px;
     margin-top: 10px;
+    width: 20%;
+}
+body{
+    background-image: url("http://www.berkeleyside.com/wp-content/uploads/2015/05/BI6A1351-720x480.jpg");
 }

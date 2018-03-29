@@ -14,6 +14,7 @@ function addTeacher() {
     var subject = document.getElementById("teacherSubject").value;
     allTeachers.push(new Teacher(firstName, lastName, subject));
     document.getElementById("confirmation").innerHTML = "Teacher Added";
+    addToLists();
     clearPage();
 }
 
@@ -22,7 +23,8 @@ function addSection() {
     var count = document.getElementById("sectionCount").value;
     allSections.push(new Section(name, count));
     document.getElementById("confirmation").innerHTML = "Section Added";
-
+    addToLists();
+    clearPage();
 }
 
 function listItems() {
@@ -123,13 +125,18 @@ function addStudentToSection() {
     var sec = getSectionById(document.getElementById("sections").value);
     sec.addStudentToSection(stud);
     console.log(sec.studentsInSection);
+    document.getElementById("confirmation").innerHTML = "Change Made";
+    clearPage();
 }
 
 function addTeacherToSection() {
     var teach = getTeacherById(document.getElementById("teachers").value);
     var sec = getSectionById(document.getElementById("sections").value);
     sec.addTeacherToSection(teach);
+    teach.subject=sec.name;
     console.log(sec.teacher);
+    document.getElementById("confirmation").innerHTML = "Change Made";
+    clearPage();
 }
 
 function displayStudentsInSection() {
